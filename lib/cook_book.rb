@@ -13,6 +13,9 @@ class CookBook
         @ingredients << ingredient.name
       end
     end
+  end
 
+  def highest_calorie_meal
+    fattest_recipe = @recipes.max { |a, b| a.total_calories <=> b.total_calories }
   end
 end
